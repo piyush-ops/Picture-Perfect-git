@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Itim&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@900&display=swap");
 
 /* resetting default values of browser  */
 * {
@@ -43,7 +43,7 @@ a {
   --gap: 1vmin;
   --text-size: 3rem;
   --word-spacing: 0.5rem;
-  --medium:medium;
+  --medium: medium;
 }
 
 ::selection {
@@ -115,7 +115,7 @@ nav h1 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   font-size: var(--main-heading-font-size);
   z-index: 2;
 }
@@ -171,6 +171,150 @@ nav ul li:hover::after {
 nav ul li:hover {
   color: var(--changing-text-color);
   transform: scale(1.1, 1.1);
+}
+
+/* nav bar for mobile screens */
+
+.container {
+  height: 70px;
+  width: 70px;
+  background-color: #000000;
+  border-radius: 50px;
+  position: relative;
+  transition: 0.4s ease;
+  display: none;
+  z-index: 1000;
+}
+
+.container.active {
+  height: 420px;
+}
+
+.toogleBox {
+  position: relative;
+  display: block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.icon {
+  position: absolute;
+  height: 4px;
+  width: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+}
+
+.toogleBox.active .icon {
+  width: 0;
+}
+
+.icon::before,
+.icon::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 35px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.icon::before {
+  top: 12px;
+}
+
+.icon::after {
+  bottom: 8px;
+}
+
+.toogleBox.active .icon::before {
+  width: 40px;
+  transform: translate(-25px, 4px) rotate(45deg);
+  transform-origin: right;
+}
+
+.toogleBox.active .icon::after {
+  width: 40px;
+  transform: translate(-25px, -5px) rotate(-45deg);
+  transform-origin: right;
+}
+
+.navItems {
+  width: 100%;
+  visibility: hidden;
+}
+
+.container.active .navItems {
+  visibility: visible;
+}
+
+li a i {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  color: white;
+  padding: 25px 0;
+  width: 100%;
+  text-align: center;
+}
+
+li a i::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 0x;
+  height: 50%;
+  transform: translateY(-50%);
+  background-color: var(--changing-text-color);
+  border-radius: 8px 0 0 8px;
+}
+
+li:hover a i::after {
+  width: 8px;
+  transition: 0.3s;
+}
+
+.container.active .navItems li a i {
+  transform: scale(1);
+  transition: 0.4s ease;
+  color: rgb(255, 255, 255);
+  transition-delay: calc(0.08s * var(--i));
+}
+
+.container.active .navItems li:hover a i {
+  transition: 0.2s ease;
+  color: var(--changing-text-color);
+}
+
+li a span {
+  position: absolute;
+  color: white;
+  margin: 22px 0;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.479);
+  padding: 0 10px;
+  border-radius: 50px;
+}
+
+.container.active .navItems li a span {
+  transform: translateX(15px);
+  transition: 0.4s ease;
+  transition-delay: calc(0.08s * var(--g));
+}
+
+.container.active .navItems li:hover a span {
+  transform: translateX(30px);
+  transition: 0.2s ease;
+  color: var(--changing-text-color);
 }
 
 header section {
@@ -436,7 +580,7 @@ article .about-content {
 /* review section of page */
 #Reviews {
   margin-top: 20rem;
-  font-family:var(--font-currsive);
+  font-family: var(--font-currsive);
 }
 
 .client-reviews {
@@ -456,7 +600,7 @@ article .about-content {
   transition: all 0.2s ease-in-out;
 }
 
-.review:hover{
+.review:hover {
   transform: scale(1.02);
 }
 
@@ -464,33 +608,33 @@ article .about-content {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-image: url('/media/images/Review/image2.jpg');
+  background-image: url("/media/images/Review/image2.jpg");
   background-size: cover;
 }
 
-.reviewer-name{
-  font-size:var(--secondary-headings);
+.reviewer-name {
+  font-size: var(--secondary-headings);
 }
 
-.star{
+.star {
   position: absolute;
-  top:20%;
-  left:85%;
+  top: 20%;
+  left: 85%;
 }
 
 .rating-checked {
-  color:var(--changing-text-color);
+  color: var(--changing-text-color);
 }
 
-.reviewer-comment{
-  font-size:var(--medium);
+.reviewer-comment {
+  font-size: var(--medium);
   font-family: var(--font-Nunito);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 /* footer section of page */
 
-footer{
+footer {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -501,20 +645,20 @@ footer{
   background-color: var(--changing-text-color);
 }
 
-footer>div{
+footer > div {
   display: flex;
   justify-content: center;
 }
 
-.logo{
-  max-width: clamp(200px,30%,30vw);
+.logo {
+  max-width: clamp(200px, 30%, 30vw);
   height: auto;
 }
 
 footer .footer-content {
   color: var(--black);
   font-size: var(--medium);
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 /* curves below hero and category section of page code  */
@@ -527,4 +671,131 @@ footer .footer-content {
 
 .layer1 {
   background-image: url("/media/images/wave-haikei.svg");
+}
+
+@media screen and (max-width:1035px) {
+  .container {
+    display: block;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, 0);
+  }
+  .nav-bar-big,
+  .main-quote {
+    display: none;
+  }
+  .main-text {
+    margin-top: 10%;
+  }
+
+  #About article {
+    flex-flow: column;
+  }
+
+  article .about-image {
+    display: none;
+  }
+  article .about-content {
+    width: 100%;
+    position: relative;
+  }
+  .about-content > .-heading {
+    text-align: center;
+  }
+  .sub-heading {
+    text-align: center;
+  }
+  .anchor-btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .star {
+    position: absolute;
+    top: 20%;
+    left: 70%;
+  }
+}
+
+@media screen and (max-width:680px) {
+  .main-img{
+    display: none;
+  }
+
+  .main-text{
+    text-align: center;
+    width: 100%;
+  }
+  .anchor-btn{
+    display: none;
+  }
+  .client-reviews {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width:556px) {
+
+  .about-text{
+    font-size: 25px;
+  }
+
+}
+
+@media screen and (max-width:460px) {
+
+  .about-text{
+    font-family: var(--font-Nunito);
+    font-size: 18px;
+    word-spacing:0;
+    letter-spacing:0;
+  }
+  .me-text{
+    display: none;
+  }
+
+  footer{
+    height: 30vh;
+  }
+
+}
+
+@media screen and (max-height:414px) {
+
+  .main-img{
+    display: none;
+  }
+
+  .main-text{
+    text-align: center;
+    width: 100%;
+  }
+  .anchor-btn{
+    display: none;
+  }
+  .client-reviews {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 5rem;
+  }
+
+  .main-text{
+    padding:0;
+  }
+
+  .about-text{
+    font-size: 30px;
+    word-spacing:0;
+    letter-spacing:0;
+  }
+
+  footer{
+    height: 50vh;
+  }
+
 }

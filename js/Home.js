@@ -24,3 +24,15 @@ $("#Gallery").flipster({
   autoplay: 2000,
   loop: true,
 });
+
+var toogleClick = document.querySelector(".toogleBox");
+var container = document.querySelector(".container");
+toogleClick.addEventListener("click", () => {
+  if (toogleClick.classList.contains("active")) {
+    toogleClick.classList.remove("active");
+    container.classList.remove("active");
+  } else {
+    toogleClick.classList.add("active");
+    container.classList.add("active");
+  }
+});

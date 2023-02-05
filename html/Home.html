@@ -35,17 +35,53 @@
   </head>
   <body>
     <!-- loader html -->
-    <div class="loader">
-    </div>
+    <div class="loader"></div>
 
     <!-- mouse trail html -->
     <div id="trailer"></div>
-
+    <!-- nav bar for mobile devices -->
+    <div class="container">
+      <a class="toogleBox">
+        <span class="icon"></span>
+      </a>
+      <ul class="navItems">
+        <li>
+          <a href="#">
+            <i class="fa fa-home" style="--i: 1"></i>
+            <span style="--g: 1">home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-home" style="--i: 1"></i>
+            <span style="--g: 1">home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-user" style="--i: 2"></i>
+            <span style="--g: 2">about</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-folder" style="--i: 3"></i>
+            <span style="--g: 3">portfolio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-globe" style="--i: 4"></i>
+            <span style="--g: 4">blog</span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <!-- header html includes nav bar and hero section -->
     <header id="Home">
       <nav>
         <h1>Picture Perfect</h1>
-        <ul>
+        <ul class="nav-bar-big">
           <li><a href="#Home">Home</a></li>
           <li><a href="#Gallery">Gallery</a></li>
           <li><a href="#About">About</a></li>
@@ -76,6 +112,7 @@
         </div>
       </section>
     </header>
+
     <!-- small curver below hero section  -->
     <div class="spacer layer1"></div>
     <main>
@@ -141,7 +178,7 @@
             />
           </div>
           <div class="about-content">
-            <h2 class="-heading">About Me</h2>
+            <h2 class="-heading">About <span class="me-text">Me</span></h2>
             <h5 class="sub-heading">Photographer <span>&</span> Editor</h5>
             <p class="about-text" data-aos="fade-left">
               My name is Mugambo and i am the photographer you are hearing about
@@ -247,7 +284,13 @@
 
     <!-- footer section of home page -->
     <footer>
-      <div><img class="logo" src="/media/images/Header/Logo.png" alt="picture perfect logo"></div>
+      <div>
+        <img
+          class="logo"
+          src="/media/images/Header/Logo.png"
+          alt="picture perfect logo"
+        />
+      </div>
       <div class="footer-content">
         &copy; Copyright 2022-2023 by Refsnes Data. All Rights Reserved. Picture
         Perfect is Powered by Perfect.corp.
