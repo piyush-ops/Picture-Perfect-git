@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb {
 
 /* header section code including nav bar and hero section  */
 header {
-  background-image: url(/media/images/Header/main-img.jpg);
+  background-image: url('../media/images/Header/main-img.jpg');
   background-size: cover;
   position: relative;
   width: var(--width-100vw);
@@ -381,25 +381,25 @@ header section {
 }
 
 .big-card:nth-child(2) {
-  background-image: url("/media/images/Header/image4.jpg");
+  background-image: url("../media/images/Header/image4.jpg");
   background-size: contain;
   transform: translateX(-10%) rotate(-1deg);
 }
 
 .big-card:nth-child(4) {
-  background-image: url("/media/images/Header/image5.jpg");
+  background-image: url("../media/images/Header/image5.jpg");
   background-size: contain;
   transform: rotate(2deg);
 }
 
 .big-card:nth-child(6) {
-  background-image: url("/media/images/Header/image3.jpg");
+  background-image: url("../media/images/Header/image3.jpg");
   background-size: contain;
   transform: translateX(-6%) rotate(-3deg);
 }
 
 .big-card:nth-child(8) {
-  background-image: url("/media/images/Header/image1.jpg");
+  background-image: url("../media/images/Header/image1.jpg");
   background-size: contain;
   transform: translate(10%, 3%) rotate(5deg);
 }
@@ -432,22 +432,22 @@ header section {
 }
 
 .little-card:nth-child(1) {
-  background-image: url("/media/images/Header/image2.jpg");
+  background-image: url("../media/images/Header/image2.jpg");
   background-size: contain;
 }
 
 .little-card:nth-child(3) {
-  background-image: url("/media/images/Header/image6.jpg");
+  background-image: url("../media/images/Header/image6.jpg");
   background-size: contain;
 }
 
 .little-card:nth-child(5) {
-  background-image: url("/media/images/Header/image7.jpg");
+  background-image: url("../media/images/Header/image7.jpg");
   background-size: contain;
 }
 
 .little-card:nth-child(7) {
-  background-image: url("/media/images/Header/image8.jpg");
+  background-image: url("../media/images/Header/image8.jpg");
   background-size: contain;
 }
 
@@ -608,7 +608,7 @@ article .about-content {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-image: url("/media/images/Review/image2.jpg");
+  background-image: url("../media/images/Review/image2.jpg");
   background-size: cover;
 }
 
@@ -662,7 +662,7 @@ footer .footer-content {
 }
 
 /* curves below hero and category section of page code  */
-.spacer {
+.spacer{
   aspect-ratio: 960/70;
   background-repeat: no-repeat;
   background-position: center;
@@ -670,7 +670,7 @@ footer .footer-content {
 }
 
 .layer1 {
-  background-image: url("/media/images/wave-haikei.svg");
+  background-image: url("../media/images/Header/wave-haikei.svg");
 }
 
 @media screen and (max-width:1035px) {
