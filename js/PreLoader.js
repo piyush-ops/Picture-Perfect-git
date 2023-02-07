@@ -7,6 +7,6 @@ window.addEventListener("load", () => {
     loader.addEventListener("transitionend", () => {
       document.body.removeChild("loader");
     });
-  },1000);
+  },0);
 
 });

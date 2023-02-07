@@ -1,9 +1,10 @@
 <?php
 session_start();
-
-
+$_SESSION['site'] = "bookMe";
+if(!isset($_SESSION['uname'])){
+  header('location: ./registration/login.php');
+}
 ?>
-
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -12,6 +13,16 @@ session_start();
         <title>Picture Perfect</title>
     </head>
   <body>
+  <nav>
+        <h1>Picture Perfect</h1>
+        <ul class="nav-bar-big">
+        <li><a href="../html/home.htm">Home</a></li>
+          <li><a href="#Gallery">Gallery</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="../php/review.php">Reviews</a></li>
+          <li><a href="../php/bookMe.php">Book Me</a></li>
+        </ul>
+      </nav>
     <h1>BookMe</h1>
   </body>
   </html>
