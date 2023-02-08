@@ -41,7 +41,8 @@
                     $my_email = "From: Pictureperfectcor@gmail.com";
 
                     if (mail($email, $subject, $body, $my_email)) {
-                        $_SESSION['msg'] = "check your email ($email) to activate your account";
+                        $_SESSION['msg'] = "check your email ($email) to activate your account
+                        if already done so then pls fill the form";
                         header('location:login.php');
                     } else {
                         echo "Email sending failed...";
@@ -84,7 +85,7 @@
                 <input type="password" name="pass" id="pass" required="required" onkeyup="validatePassword()">
                 <i class="fa-solid fa-lock"></i>
                 <span>create password</span>
-                <p id="pass-valid"><?php  if (isset($pass_error_msg)) {
+                <p class="pass-valid" id="pass-valid"><?php  if (isset($pass_error_msg)) {
                     echo $pass_error_msg;}?></p>
             </div>
             <div class="inputBox">

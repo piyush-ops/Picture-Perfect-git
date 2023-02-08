@@ -21,6 +21,8 @@
     <script src="../../js/PreLoader.js" defer></script>
     <!-- validation js -->
     <script src="../../js/login.js" defer></script>
+    <!-- forgotpassword js  -->
+    <script src="../../js/forgotpass.js" defer></script>
 </head>
 <body>
     

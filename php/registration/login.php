@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include './links.php' ?>
-    <title>register your account</title>
+    <title>Login to your account</title>
 </head>
 
 <body>
@@ -24,6 +24,9 @@
         $emailno = mysqli_num_rows($sql);
 
         if($emailno){
+            $_SESSION['email'] = $email;
+            $forgotPass= "Forgot Password. Dont worry <a style='color: white;' 
+            href='./forgotPassemail.php'>Click here</a>";
             $data = mysqli_fetch_assoc($sql);
             $db_pass = $data['password'];
             $_SESSION['uname'] = $data['username'];
@@ -35,7 +38,7 @@
                     header('location:../../html/home.htm');
                 }
             }else{
-                $pass_error_msg= "password is not valid";
+                $pass_error_msg= "password is invalid";
             }
 
         }else{
@@ -54,7 +57,9 @@
             <h2>Sign In</h2>
             <p class="session-msg"><?php if (isset($_SESSION['msg'])) {
                 echo $_SESSION['msg'];
-            } else {
+            } elseif (isset($_SESSION['pass-message'])) {
+                echo $_SESSION['pass-message'];
+            } else{
                 echo "Pls login to continue";
             }?> </P>
             <div class="inputBox">
@@ -73,8 +78,17 @@
             </div>
             <div class="inputBox">
                 <input type="submit" id="submit" name="submit" value="Login to Account">
-            </div>
+            </div>      
             <p class="link-p">Already a member ? <a href="./registration.php" class="login">Sign Up</a></p>
+            <p style="color: #00ffe1; font-size: .6em; margin-top: -20px; font-weight: 300; 
+                    background-color: rgba(0, 0, 0, 0.562);
+                    padding: 0.5em;
+                    border-radius: 25px;">
+                <?php
+                if(isset($forgotPass)){
+                    echo $forgotPass;
+                }
+            ?></p>  
         </form>
     </div>
 

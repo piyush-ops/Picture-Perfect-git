@@ -130,7 +130,7 @@ body {
   color: #fff;
 }
 
-#pass-valid,
+.pass-valid,
 #email-valid {
   font-size: 10px;
   color: red;
