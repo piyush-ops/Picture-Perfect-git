@@ -46,14 +46,14 @@
         <form method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" class="form signup">
             <h2>Set New Password</h2> 
             <div class="inputBox">
-                <input type="password" name="pass" id="pass" required="required" onkeyup="validatingPassword()">
+                <input type="password" name="pass" id="pass" autocomplete="off" required="required" onkeyup="validatingPassword()">
                 <i class="fa-regular fa-envelope"></i>
                 <span>New Password</span>
                 <p class="pass-valid" id="pass-validation"><?php  if (isset($pass_error_msg)) {
                     echo $pass_error_msg;}?></p>
             </div>
             <div class="inputBox">
-                <input type="password" name="cpass" id="cpass" required="required">
+                <input type="password" name="cpass" id="cpass" autocomplete="off" required="required">
                 <i class="fa-regular fa-envelope"></i>
                 <span>Confirm Password</span>
             </div> 

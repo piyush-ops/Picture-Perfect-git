@@ -33,7 +33,7 @@
             $pass_decode = password_verify($pass, $db_pass);
             if ($pass_decode) {
                 if (isset($_SESSION['site'])) {
-                    $_SESSION['site'] == "review" ? header('location:../review.php') : header('location:../bookMe.php');
+                    $_SESSION['site'] == "review" ? header('location:../review.php') : header('location:../bookMe/bookMe.php');
                 }else{
                     header('location:../../html/home.htm');
                 }
@@ -63,14 +63,14 @@
                 echo "Pls login to continue";
             }?> </P>
             <div class="inputBox">
-                <input type="text" name="email" id="email"  value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>" required="required" onkeyup='validateEmail()'>
+                <input type="text" name="email" id="email" autocomplete="off"  value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>" required="required" onkeyup='validateEmail()'>
                 <i class="fa-regular fa-envelope"></i>
                 <span>email address</span>
                 <p id="email-valid"><?php if (isset($email_error_msg)) {
                     echo $email_error_msg;} ?></p>
             </div>
             <div class="inputBox">
-                <input type="password" name="pass" id="pass" required="required">
+                <input type="password" name="pass" autocomplete="off" id="pass" required="required">
                 <i class="fa-solid fa-lock"></i>
                 <span>Enter Password</span>
                 <p id="email-valid"><?php if (isset($pass_error_msg)) {

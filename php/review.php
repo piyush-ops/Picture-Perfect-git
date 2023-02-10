@@ -21,7 +21,7 @@ if(!isset($_SESSION['uname'])){
           <li><a href="#Gallery">Gallery</a></li>
           <li><a href="#About">About</a></li>
           <li><a href="../php/review.php">Reviews</a></li>
-          <li><a href="../php/bookMe.php">Book Me</a></li>
+          <li><a href="../php/bookMe/bookMe.php">Book Me</a></li>
         </ul>
       </nav>
     <a href="./registration/logout.php">logout</a>

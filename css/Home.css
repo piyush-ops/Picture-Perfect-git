@@ -316,7 +316,7 @@ li a span {
   transition: 0.2s ease;
   color: var(--changing-text-color);
 }
-
+/* hero section */
 header section {
   height: inherit;
   position: absolute;
