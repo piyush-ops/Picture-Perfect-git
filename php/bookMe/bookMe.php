@@ -11,6 +11,8 @@ if (!isset($_SESSION['uname'])) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- fav-icon -->
+  <link rel="icon" type="image/png" href="../../media/images/Review/fav-icon.ico" />
   <!-- loading scrren css -->
   <link rel="stylesheet" href="../../css/Loader.css" />
   <!-- css for current page -->
@@ -19,7 +21,7 @@ if (!isset($_SESSION['uname'])) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- loading screen js -->
   <script src="../../js/PreLoader.js" defer></script>
-  <title>Picture Perfect</title>
+  <title>Picture Perfect 🛒</title>
 </head>
 
 <body>
@@ -78,7 +80,7 @@ if (!isset($_SESSION['uname'])) {
         <li><a href="../../html/home.htm" draggable="false">Home</a></li>
         <li><a href="#Gallery" draggable="false">Gallery</a></li>
         <li><a href="#About" draggable="false">About</a></li>
-        <li><a href="../review.php" draggable="false">Reviews</a></li>
+        <li><a href="../review/review.php" draggable="false">Reviews</a></li>
         <li><a class="logout" href="../registration/logout.php" draggable="false">logout</a></li>
       </ul>
     </nav>

@@ -14,13 +14,13 @@ $charge = \Stripe\Charge::create([
 ]);
 $status = $charge['status'];
 $paymentMode = $charge['payment_method'];
-$email=$_SESSION['email'];
+$email = $_SESSION['email'];
 $updateQuery = "UPDATE payment SET txnStatus='$status'  WHERE emailID='$email'";
-$sql=mysqli_query($conn,$updateQuery);
+$sql = mysqli_query($conn, $updateQuery);
 $updateQuery2 = "UPDATE payment SET paymentMode='$paymentMode'  WHERE emailID='$email'";
-$sql2=mysqli_query($conn,$updateQuery2);
+$sql2 = mysqli_query($conn, $updateQuery2);
 $updateQuery3 = "UPDATE registration SET role='2' WHERE email='$email'";
-$sql3=mysqli_query($conn,$updateQuery3);
+$sql3 = mysqli_query($conn, $updateQuery3);
 ?>
 
 <!DOCTYPE html>
@@ -30,13 +30,16 @@ $sql3=mysqli_query($conn,$updateQuery3);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Confirmation</title>
+  <!-- fav-icon -->
+  <link rel="icon" type="image/png" href="../../media/images/Review/fav-icon.ico" />
+  <title>Payment Confirmation 🙏🏼</title>
   <style>
-  * {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       background-image: url("../../media/images/Header/main-img.jpg");
       background-size: cover;
@@ -45,6 +48,7 @@ $sql3=mysqli_query($conn,$updateQuery3);
       justify-content: center;
       align-items: center;
     }
+
     /* Glassmorphism card effect */
     .card {
       backdrop-filter: blur(16px) saturate(180%);
@@ -60,26 +64,27 @@ $sql3=mysqli_query($conn,$updateQuery3);
       position: relative;
     }
 
-    .go-back{
-        text-decoration: none;
-        background-color: rgb(90, 25, 25);
-        color: white;
-        padding:1rem 2rem;
-        position:absolute;
-        top:70%;
-        left: 50%;
-        transform: translate(-50%,0);
-    }
-    .go-back:hover{
-        background-color: rgb(117, 29, 29);
+    .go-back {
+      text-decoration: none;
+      background-color: rgb(90, 25, 25);
+      color: white;
+      padding: 1rem 2rem;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
 
+    .go-back:hover {
+      background-color: rgb(117, 29, 29);
+    }
   </style>
 </head>
+
 <body>
-<?php
-if($status=="succeeded"){
-  echo '   <div class="card">
+  <?php
+  if ($status == "succeeded") {
+    echo '   <div class="card">
   <div class="logo">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -115,8 +120,8 @@ if($status=="succeeded"){
     <a class="go-back" href="../../html/home.htm">Go to Home</a>
   </div>
 </div>';
-}else{
-  echo '<div class="card">
+  } else {
+    echo '<div class="card">
   <div class="logo">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -165,8 +170,8 @@ if($status=="succeeded"){
     <a class="go-back" href="../../html/home.htm">Go to Home</a>
   </div>
 </div>';
-}
-?>
+  }
+  ?>
 
 
 </body>

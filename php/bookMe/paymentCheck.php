@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['state'])){
+if (!isset($_SESSION['state'])) {
     header('location:bookMe.php');
 }
 require('../registration/dbcon.php');
@@ -9,6 +9,8 @@ require('../registration/dbcon.php');
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fav-icon -->
+    <link rel="icon" type="image/png" href="../../media/images/Review/fav-icon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         #customers {
@@ -44,20 +46,20 @@ require('../registration/dbcon.php');
             margin-left: 2rem;
         }
     </style>
-    <title>Check Details</title>
+    <title>Check Details 💲</title>
 </head>
 
 <body>
     <?php
-    $email=$_SESSION['email'];
+    $email = $_SESSION['email'];
     $query = "select * from payment where emailID='$email'";
     $sql = mysqli_query($conn, $query);
-    $data=mysqli_fetch_assoc($sql);
-    $uname=$data['uname'];
-    $fullAddress=$data['address'];
-    $arrayAddress=  explode(",", $fullAddress);
-    $address=$arrayAddress[0];
-    $zip=$arrayAddress[1];
+    $data = mysqli_fetch_assoc($sql);
+    $uname = $data['uname'];
+    $fullAddress = $data['address'];
+    $arrayAddress = explode(",", $fullAddress);
+    $address = $arrayAddress[0];
+    $zip = $arrayAddress[1];
     ?>
     <h1>Details Check</h1>
     <h2>Check Your detail Carefully. After payment you will not be able to change.</h2>
@@ -69,7 +71,7 @@ require('../registration/dbcon.php');
         <tr>
             <th>User Name</th>
             <td>
-                <?php echo $uname?>
+                <?php echo $uname ?>
             </td>
         </tr>
         <tr>

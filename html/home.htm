@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +25,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Picture Perfect</title>
+    <title>Picture Perfect 🏠</title>
     <!-- loading screen js -->
     <script src="../js/PreLoader.js" defer></script>
     <!-- mouse trail js -->
@@ -34,6 +33,7 @@
     <!-- home page related js -->
     <script src="../js/Home.js" defer></script>
   </head>
+
   <body>
     <!-- loader html -->
     <div class="loader"></div>
@@ -86,7 +86,7 @@
           <li><a href="#Home">Home</a></li>
           <li><a href="#Gallery">Gallery</a></li>
           <li><a href="#About">About</a></li>
-          <li><a href="../php/review.php">Reviews</a></li>
+          <li><a href="../php/review/review.php">Reviews</a></li>
           <li><a href="../php/bookMe/bookMe.php">Book Me</a></li>
         </ul>
       </nav>
@@ -121,47 +121,56 @@
       <section id="Gallery" data-aos="fade-right">
         <h2 class="-heading">Category</h2>
         <h5 class="-sub-heading">Choose <span>your</span> Occasion</h5>
-        <div>
+        <div class="image-container">
+          <p class="dbl-click-msg">*double click on selected occasion</p>
           <div id="image-track">
             <img
               class="gallery-image"
               src="../media/images/Header/image1.jpg"
               draggable="false"
+              ondblclick="galImagedblclick()"
             />
             <img
               class="gallery-image"
               src="../media/images/Header/image2.jpg"
               draggable="false"
+              ondblclick="galImagedblclick()"
             />
             <img
               class="gallery-image"
               src="../media/images/Header/image3.jpg"
               draggable="false"
+              ondblclick="galImagedblclick()"
             />
             <img
               class="gallery-image"
               src="../media/images/Header/image4.jpg"
               draggable="false"
+              ondblclick="galImagedblclick()"
             />
             <img
               class="gallery-image"
               src="../media/images/Header/image5.jpg"
               draggable="false"
+              ondblclick="galImagedblclick()"
             />
             <img
               class="gallery-image"
               src="../media/images/Header/image6.jpg"
               draggable="false"
+              ondblclick="galImagedblclick()"
             />
             <img
               class="gallery-image"
               src="../media/images/Header/image7.jpg"
               draggable="false"
+              ondblclick="galImagedblclick()"
             />
             <img
               class="gallery-image"
               src="../media/images/Header/image8.jpg"
               draggable="false"
+              ondblclick="galImagedblclick()"
             />
           </div>
         </div>

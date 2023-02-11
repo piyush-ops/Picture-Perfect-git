@@ -68,6 +68,7 @@ body {
 .container .form .inputBox span {
   position: absolute;
   left: 0;
+  top:0;
   padding: 12px 10px 12px 48px;
   pointer-events: none;
   font-size: 1em;

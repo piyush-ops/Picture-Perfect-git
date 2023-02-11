@@ -25,8 +25,8 @@ $("#Gallery").flipster({
   loop: true,
 });
 
-var toogleClick = document.querySelector(".toogleBox");
-var container = document.querySelector(".container");
+let toogleClick = document.querySelector(".toogleBox");
+let container = document.querySelector(".container");
 toogleClick.addEventListener("click", () => {
   if (toogleClick.classList.contains("active")) {
     toogleClick.classList.remove("active");
@@ -36,3 +36,8 @@ toogleClick.addEventListener("click", () => {
     container.classList.add("active");
   }
 });
+
+//category slider image double click even handle
+function galImagedblclick(){
+  return location.assign("../php/bookMe/bookMe.php");
+}
