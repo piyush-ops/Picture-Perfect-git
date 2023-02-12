@@ -77,7 +77,7 @@ if (!isset($_SESSION['uname'])) {
     <nav>
       <h1>Picture Perfect</h1>
       <ul class="nav-bar-big">
-        <li><a href="../../html/home.htm" draggable="false">Home</a></li>
+        <li><a href="../../index.htm" draggable="false">Home</a></li>
         <li><a href="#Gallery" draggable="false">Gallery</a></li>
         <li><a href="#About" draggable="false">About</a></li>
         <li><a href="../review/review.php" draggable="false">Reviews</a></li>

@@ -39,5 +39,5 @@ toogleClick.addEventListener("click", () => {
 
 //category slider image double click even handle
 function galImagedblclick(){
-  return location.assign("../php/bookMe/bookMe.php");
+  return location.assign("/php/bookMe/bookMe.php");
 }

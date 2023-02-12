@@ -2,7 +2,7 @@
 session_start();
 $_SESSION['site'] = "review";
 if (!isset($_SESSION['uname'])) {
-  header('location: ./registration/login.php');
+  header('location: ../registration/login.php');
 }
 ?>
 <html lang="en">
@@ -20,14 +20,13 @@ if (!isset($_SESSION['uname'])) {
   <nav>
     <h1>Picture Perfect</h1>
     <ul class="nav-bar-big">
-      <li><a href="../../html/home.htm">Home</a></li>
+      <li><a href="../../index.htm">Home</a></li>
       <li><a href="#Gallery">Gallery</a></li>
       <li><a href="#About">About</a></li>
       <li><a href="../bookMe/bookMe.php">Book Me</a></li>
-      <li><a href="./registration/logout.php">logout</a></li>
+      <li><a href="../registration/logout.php">logout</a></li>
     </ul>
   </nav>
-  <a href="../registration/logout.php">logout</a>
 </body>
 
 </html>
