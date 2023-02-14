@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2023 at 05:01 PM
+-- Generation Time: Feb 14, 2023 at 06:34 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -38,13 +38,6 @@ CREATE TABLE `payment` (
   `pid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `payment`
---
-
-INSERT INTO `payment` (`emailID`, `amount`, `orderDate`, `paymentMode`, `txnStatus`, `address`, `uname`, `pid`) VALUES
-('terabappayush@gmail.com', 25000, '2023-02-10 21:17:24', 'card_1MZyp3BeXDHZA7ZgFY1uNSBi', 'succeeded', 't101 medical colony ratanada Jodhpur Rajasthan,342001', 'Piyush', 27);
-
 -- --------------------------------------------------------
 
 --
@@ -66,8 +59,36 @@ CREATE TABLE `registration` (
 --
 
 INSERT INTO `registration` (`id`, `username`, `email`, `password`, `token`, `status`, `role`) VALUES
-(1, 'admin', 'Pictureperfectcor@gmail.com', '$2y$10$8K0SVHN997ZcStUGyb1FYO8Y0.BwKFlvJMBtBOg76eFaacPjeR7jS', 'I-am-boss-here', 'active', 1),
-(2, 'Piyush', 'terabappayush@gmail.com', '$2y$10$rHhD.We6kvx2EK0TFnro4..3Xnnw.omOiRWhWXokHZhwDzmW/5dZ.', '954a05594eb7abd6795e082852b2ec', 'active', 2);
+(1, 'admin', 'Pictureperfectcor@gmail.com', '$2y$10$jdFdyAOT.QQLlJxFv0uCpeQdbYB4MTdhNCaGTmK4/ENU.a0bCPxAi', 'I-am-boss-here', 'active', 1),
+(10, 'piyush', 'terabappayush@gmail.com', '$2y$10$nJSQWQsJd14wKsKbFpt4e.jQl22w3RUJ8VHF4opdLamAXHpV.dWga', 'b4ea3e96d8bb5afd1afe713e7fec9e', 'active', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+  `rid` int(4) NOT NULL,
+  `rname` varchar(100) NOT NULL,
+  `remail` varchar(120) NOT NULL,
+  `rtitle` varchar(255) NOT NULL,
+  `rsummary` varchar(2000) NOT NULL,
+  `points` varchar(1) NOT NULL,
+  `role` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`rid`, `rname`, `remail`, `rtitle`, `rsummary`, `points`, `role`) VALUES
+(49, 'piyush', ' terabappayush@gmail.com', '1234', '1234', '5', 0),
+(50, 'piyush', ' terabappayush@gmail.com', '1234', '1234', '5', 0),
+(51, 'piyush', ' terabappayush@gmail.com', '1234', '1234', '3', 0),
+(52, 'admin', ' Pictureperfectcor@gmail.com', '1234', '1234', '5', 1),
+(53, 'admin', ' Pictureperfectcor@gmail.com', '1234', '1234', '3', 1),
+(54, 'admin', ' Pictureperfectcor@gmail.com', '1234', '1234', '2', 1);
 
 --
 -- Indexes for dumped tables
@@ -86,6 +107,12 @@ ALTER TABLE `registration`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+  ADD PRIMARY KEY (`rid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -93,13 +120,19 @@ ALTER TABLE `registration`
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `rid` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
