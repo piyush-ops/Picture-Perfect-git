@@ -4,6 +4,6 @@ session_start();
 session_unset();
 session_destroy();
 
-header('location:../../html/home.htm');
+header('location:../../index.htm');
 
 ?>

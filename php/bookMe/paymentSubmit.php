@@ -21,6 +21,7 @@ $updateQuery2 = "UPDATE payment SET paymentMode='$paymentMode'  WHERE emailID='$
 $sql2 = mysqli_query($conn, $updateQuery2);
 $updateQuery3 = "UPDATE registration SET role='2' WHERE email='$email'";
 $sql3 = mysqli_query($conn, $updateQuery3);
+$_SESSION['role']=2;
 ?>
 
 <!DOCTYPE html>
@@ -117,7 +118,7 @@ $sql3 = mysqli_query($conn, $updateQuery3);
     <p>
     Have a nice day.
     </p>
-    <a class="go-back" href="../../html/home.htm">Go to Home</a>
+    <a class="go-back" href="../../index.htm">Go to Home</a>
   </div>
 </div>';
   } else {
@@ -167,7 +168,7 @@ $sql3 = mysqli_query($conn, $updateQuery3);
     <h1>Payment Failed !</h1>
     <p>Sorry For trouble pls try again after sometime.</p>
     <p>Have a nice day.</p>
-    <a class="go-back" href="../../html/home.htm">Go to Home</a>
+    <a class="go-back" href="../../index.htm">Go to Home</a>
   </div>
 </div>';
   }
