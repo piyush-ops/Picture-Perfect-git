@@ -32,6 +32,7 @@
             $data = mysqli_fetch_assoc($sql);
             $db_pass = $data['password'];
             $_SESSION['uname'] = $data['username'];
+            $_SESSION['role']=$data['role'];
             $pass_decode = password_verify($pass, $db_pass);
             if ($pass_decode) {
                 if (isset($_SESSION['site'])) {
@@ -58,12 +59,14 @@
         <form method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" class="form signup">
             <h2>Sign In</h2>
             <p class="session-msg">
-                <?php if (isset($_SESSION['msg'])) {
+                <?php if (isset($_SESSION['msg']) && isset($_SESSION['pass-message'])) {
+                     echo $_SESSION['pass-message'];
+                } elseif (isset($_SESSION['msg'])) {
                     echo $_SESSION['msg'];
-                } elseif (isset($_SESSION['pass-message'])) {
+                } else if(isset($_SESSION['pass-message'])) {
                     echo $_SESSION['pass-message'];
-                } else {
-                    echo "Pls login to continue";
+                } else{
+                    echo "enter password to login";
                 } ?>
             </P>
             <div class="inputBox">

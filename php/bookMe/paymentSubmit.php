@@ -21,6 +21,7 @@ $updateQuery2 = "UPDATE payment SET paymentMode='$paymentMode'  WHERE emailID='$
 $sql2 = mysqli_query($conn, $updateQuery2);
 $updateQuery3 = "UPDATE registration SET role='2' WHERE email='$email'";
 $sql3 = mysqli_query($conn, $updateQuery3);
+$_SESSION['role']=2;
 ?>
 
 <!DOCTYPE html>
