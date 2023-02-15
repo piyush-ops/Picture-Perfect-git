@@ -36,9 +36,13 @@
             $pass_decode = password_verify($pass, $db_pass);
             if ($pass_decode) {
                 if (isset($_SESSION['site'])) {
-                    $_SESSION['site'] == "review" ? header('location:../review/review.php') : header('location:../bookMe/bookMe.php');
-                } else {
-                    header('location:../../html/home.htm');
+                    if($_SESSION['site'] == "review"){
+                        header('location:../review/review.php');
+                    }elseif($_SESSION['site'] == "bookMe"){
+                        header('location:../bookMe/bookMe.php');
+                    }else{
+                        header('location:../../index.php');
+                    }
                 }
             } else {
                 $pass_error_msg = "password is invalid";

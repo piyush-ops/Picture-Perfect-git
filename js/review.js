@@ -79,7 +79,7 @@ const showData = () => {
 
         const reviewerCommentP = document.createElement("p");
         reviewerCommentP.classList.add("reviewer-comment");
-        reviewerCommentP.innerHTML = `Title: ${review.rtitle}<br>Summary: ${review.rsummary}...`;
+        reviewerCommentP.innerHTML = `Title: ${review.rtitle}<br>Summary: ${review.rsummary}`;
         reviewDiv.appendChild(reviewerCommentP);
         allReviews.appendChild(reviewDiv);
       });

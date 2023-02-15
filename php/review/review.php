@@ -55,14 +55,14 @@ if (!isset($_SESSION['uname'])) {
     </a>
     <ul class="navItems">
       <li>
-        <a href="#">
+        <a href="../../index.php">
           <i class="fa fa-home" style="--i: 1"></i>
           <span style="--g: 1">home</span>
         </a>
       </li>
       <li>
         <a href="#">
-          <i class="fa fa-home" style="--i: 2"></i>
+          <i class="fa fa-image" style="--i: 2"></i>
           <span style="--g: 2">Gallery</span>
         </a>
       </li>
@@ -73,15 +73,15 @@ if (!isset($_SESSION['uname'])) {
         </a>
       </li>
       <li>
-        <a href="#">
-          <i class="fa fa-folder" style="--i: 4"></i>
-          <span style="--g: 4">portfolio</span>
+        <a href="../bookMe/bookMe.php">
+        <i class="fa fa-money" style="--i: 5"></i>
+          <span style="--g: 4">BookMe</span>
         </a>
       </li>
       <li>
-        <a href="#">
-          <i class="fa fa-globe" style="--i: 5"></i>
-          <span style="--g: 5">blog</span>
+        <a href="../registration/logout.php">
+          <i class="fa fa-arrow-right" style="--i: 5"></i>
+          <span style="--g: 5">logout</span>
         </a>
       </li>
     </ul>
@@ -91,7 +91,7 @@ if (!isset($_SESSION['uname'])) {
     <nav>
       <h1>Picture Perfect</h1>
       <ul class="nav-bar-big">
-        <li><a href="../../index.htm" draggable="false">Home</a></li>
+        <li><a href="../../index.php" draggable="false">Home</a></li>
         <li><a href="#Gallery" draggable="false">Gallery</a></li>
         <li><a href="#About" draggable="false">About</a></li>
         <li><a href="../bookMe/bookMe.php" draggable="false">BookMe</a></li>
