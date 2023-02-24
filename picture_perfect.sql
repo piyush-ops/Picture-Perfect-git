@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2023 at 03:41 PM
+-- Generation Time: Feb 24, 2023 at 09:04 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -31,6 +31,20 @@ CREATE TABLE `gallery` (
   `id` int(5) NOT NULL,
   `image_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `image_url`) VALUES
+(43, 'IMG-63ee76154c50b0.15606531.jpg'),
+(44, 'IMG-63ee76154d5fd1.88970482.jpg'),
+(45, 'IMG-63ee76154e3b28.90134915.jpg'),
+(46, 'IMG-63ee76154f1478.95870044.jpg'),
+(47, 'IMG-63ee76154ff4c3.78564638.jpg'),
+(48, 'IMG-63ee7615507d14.06222166.jpg'),
+(49, 'IMG-63ee761550fb05.95257552.jpg'),
+(50, 'IMG-63ee7615518b66.63924186.jpg');
 
 -- --------------------------------------------------------
 
@@ -79,7 +93,7 @@ CREATE TABLE `registration` (
 INSERT INTO `registration` (`id`, `username`, `email`, `password`, `token`, `status`, `role`) VALUES
 (1, 'admin', 'Pictureperfectcor@gmail.com', '$2y$10$jdFdyAOT.QQLlJxFv0uCpeQdbYB4MTdhNCaGTmK4/ENU.a0bCPxAi', 'I-am-boss-here', 'active', 1),
 (10, 'piyush', 'terabappayush@gmail.com', '$2y$10$nJSQWQsJd14wKsKbFpt4e.jQl22w3RUJ8VHF4opdLamAXHpV.dWga', 'b4ea3e96d8bb5afd1afe713e7fec9e', 'active', 2),
-(11, 'piyush', 'pkd342001@gmail.com', '$2y$10$ZJ8qfnPSMolf8UnN5a/STeJfwt1ZLKIdW6ExsDMXBNDOSucfH4uvO', '07019b12a259ceb261231267f52d33', 'active', 2);
+(11, 'piyush', 'pkd342001@gmail.com', '$2y$10$ZJ8qfnPSMolf8UnN5a/STeJfwt1ZLKIdW6ExsDMXBNDOSucfH4uvO', '07019b12a259ceb261231267f52d33', 'active', 0);
 
 -- --------------------------------------------------------
 
@@ -126,7 +140,8 @@ CREATE TABLE `tbl_uploads` (
 --
 
 INSERT INTO `tbl_uploads` (`id`, `file`, `type`, `size`, `email`) VALUES
-(10, '7117-photos.rar', 'application/octet-stream', '3444.5380859375', 'pkd342001@gmail.com');
+(10, '7117-photos.rar', 'application/octet-stream', '3444.5380859375', 'pkd342001@gmail.com'),
+(11, '78572-photos.rar', 'application/octet-stream', '3444.5380859375', 'terabappayush@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -170,7 +185,7 @@ ALTER TABLE `tbl_uploads`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `payment`
@@ -194,7 +209,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `tbl_uploads`
 --
 ALTER TABLE `tbl_uploads`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
