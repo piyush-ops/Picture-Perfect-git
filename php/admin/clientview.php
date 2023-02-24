@@ -15,7 +15,7 @@ require '../registration/dbcon.php';
 </head>
 <style>
    body {
-      background-color: #3b2d5e;
+      background-color:darkslategray;
       color: white;
    }
 
@@ -147,7 +147,7 @@ require '../registration/dbcon.php';
          <td><?php echo $row['file'] ?></td>
          <td><?php echo $row['type'] ?></td>
          <td><?php echo $row['email'] ?></td>
-         <td><a href="../../upload/<?php echo $row['file'] ?>" target="_blank">Download</a></td>
+         <td><a style="color:gold;" href="../../upload/<?php echo $row['file'] ?>" target="_blank">Download</a></td>
       </tr>
    <?php
    }

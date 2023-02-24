@@ -14,7 +14,7 @@ if ($_SESSION['role'] != 1) {
   <title>PICTURE PERFECT MAKES YOU PERFECT</title>
   <style>
     body {
-      background-color: #2E0854;
+      background-color: darkslategray;
       color: white;
     }
 
@@ -118,7 +118,7 @@ if ($_SESSION['role'] != 1) {
         <a href="../registration/logout.php">Logout</a>
       </li>
       <li>
-        <a href="view.php">client files</a>
+        <a href="view.php">client Photograph folder</a>
       </li>
     </ul>
   </nav>
@@ -126,6 +126,7 @@ if ($_SESSION['role'] != 1) {
     <input type="email" name="email" required="required" placeholder="email where you want to send data">
     <label for="username">Enter The Client's Email</label>
     <input type="file" name="file" />
+    <p style="text-align: center;">upload only rar and zip files</p>
     <button type="submit" name="btn-upload">upload</button>
   </form>
   <?php
@@ -139,10 +140,25 @@ if ($_SESSION['role'] != 1) {
   <?php
   } else {
   ?>
-    <label>Try to upload any files(rar, ZIP,etc...)</label>
+  
   <?php
   }
   ?>
+      <br> <hr>
+  	<?php if (isset($_GET['error'])): ?>
+		<p style="text-align: center;"><?php echo $_GET['error']; ?></p>
+	<?php endif ?>
+  <form action="../Gallery/upload.php"
+      method="post"
+      enctype="multipart/form-data">
+  <h2 style="text-align: center;">Add new Image in Gallery Section(Limit 5 at once)</h2>
+  <input type="file" 
+         name="my_image[]"
+         multiple />
+  <p style="text-align: center;">upload only jpg , jpeg & png </p>
+  <button type="submit" name="btn-upload">upload</button>
+</form>
+    <a href="../Gallery/view.php">View</a>
 </body>
 
 </html>

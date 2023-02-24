@@ -12,7 +12,7 @@ require '../registration/dbcon.php';
 <style>
    body {
       font-family: Arial, sans-serif;
-      background-color: #2E0854;
+      background-color:darkslategray;
       color: white;
    }
 
@@ -35,12 +35,18 @@ require '../registration/dbcon.php';
 
    nav li {
       display: inline-block;
-      margin-left: 20px;
+      margin-left: 50px;
    }
 
    nav a {
       color: #fff;
       text-decoration: none;
+      transition: all 0.2s ease-in-out;
+   }
+
+   nav a:hover {
+      color: gold;
+      text-decoration: underline;
    }
 
    table {
@@ -130,6 +136,7 @@ require '../registration/dbcon.php';
          <tr>
             <td>File Name</td>
             <td>File Type</td>
+            <td>Email</td>
             <td>View</td>
          </tr>
          <?php
@@ -140,6 +147,7 @@ require '../registration/dbcon.php';
             <tr>
                <td><?php echo $row['file'] ?></td>
                <td><?php echo $row['type'] ?></td>
+               <td><?php echo $row['email'] ?></td>
                <td><a href="../../upload/<?php echo $row['file'] ?>" target="_blank">Download</a></td>
             </tr>
          <?php

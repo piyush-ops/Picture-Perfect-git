@@ -47,15 +47,9 @@ if (!isset($_SESSION['uname'])) {
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="../Gallery/view.php">
           <i class="fa fa-image" style="--i: 2"></i>
           <span style="--g: 2">Gallery</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-user" style="--i: 3"></i>
-          <span style="--g: 3">about</span>
         </a>
       </li>
       <li>
@@ -78,8 +72,7 @@ if (!isset($_SESSION['uname'])) {
       <h1>Picture Perfect</h1>
       <ul class="nav-bar-big">
         <li><a href="../../index.php" draggable="false">Home</a></li>
-        <li><a href="#Gallery" draggable="false">Gallery</a></li>
-        <li><a href="#About" draggable="false">About</a></li>
+        <li><a href="../Gallery/view.php" draggable="false">Gallery</a></li>
         <li><a href="../review/review.php" draggable="false">Reviews</a></li>
         <li><a class="logout" href="../registration/logout.php" draggable="false">logout</a></li>
       </ul>
@@ -150,6 +143,21 @@ if (!isset($_SESSION['uname'])) {
       </div>
     </div>
   </main>
+  <footer>
+    <div>
+      <img class="logo" src="../../media/images/Header/Logo.png" alt="picture perfect logo" />
+    </div>
+    <div>
+      <a class="footer-href-design blog" href="../../html/All-Blog.html"><i class="fa fa-question"></i> Faq's</a>
+    </div>
+    <div>
+      <a class="footer-href-design contact-us" href="../../contact.html"><i class="fa fa-phone"></i> Contact us</a>
+    </div>
+    <div class="footer-content">
+      &copy; Copyright 2022-2023 by Refsnes Data. All Rights Reserved. Picture
+      Perfect is Powered by Perfect.corp.
+    </div>
+  </footer>
   <script>
     //script for mobile nav 
     var toogleClick = document.querySelector(".toogleBox");

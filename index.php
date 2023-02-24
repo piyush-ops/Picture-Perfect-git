@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['site'] = "home";
-include ('php/registration/dbcon.php');
+include('php/registration/dbcon.php');
 ?>
 
 <!DOCTYPE html>
@@ -53,26 +53,40 @@ include ('php/registration/dbcon.php');
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="php/Gallery/view.php">
           <i class="fa fa-image" style="--i: 2"></i>
           <span style="--g: 2">Gallery</span>
         </a>
       </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-user" style="--i: 3"></i>
-          <span style="--g: 3">about</span>
-        </a>
-      </li>
+      <?php
+      if (isset($_SESSION['role'])) {
+        if ($_SESSION['role'] == 1) {
+          echo '<li><a href="php/admin/fileupload.php"> <i class="fa fa-dashboard" style="--i: 3"></i>
+            <span style="--g: 2">Dashboard</span></a></li>';
+        } elseif ($_SESSION['role'] == 2) {
+          echo '<li><a href="php/admin/clientview.php"> <i class="fa fa-dashboard" style="--i: 3"></i>
+            <span style="--g: 2">Dashboard</span></a></li>';
+        }
+      }
+      ?>
+      <?php
+      if (isset($_SESSION['email'])) {
+        echo '<li><a href="php/registration/logout.php"> <i class="fa fa-user" style="--i: 4"></i>
+          <span style="--g: 2">Logout</span></a></li>';
+      } else {
+        echo '<li><a href="php/registration/login.php"> <i class="fa fa-user" style="--i: 4"></i>
+          <span style="--g: 2">Login</span></a></li>';
+      }
+      ?>
       <li>
         <a href="php/review/review.php">
-          <i class="fa fa-heart" style="--i: 4"></i>
+          <i class="fa fa-heart" style="--i: 5"></i>
           <span style="--g: 4">Review</span>
         </a>
       </li>
       <li>
         <a href="php/bookMe/bookMe.php">
-          <i class="fa fa-money" style="--i: 5"></i>
+          <i class="fa fa-money" style="--i: 6"></i>
           <span style="--g: 5">bookMe</span>
         </a>
       </li>
@@ -83,7 +97,7 @@ include ('php/registration/dbcon.php');
     <nav>
       <h1>Picture Perfect</h1>
       <ul class="nav-bar-big">
-        <li><a href="#Gallery">Gallery</a></li>
+        <li><a href="php/Gallery/view.php">Gallery</a></li>
         <li><a href="php/review/review.php">Reviews</a></li>
         <li><a href="php/bookMe/bookMe.php">Book Me</a></li>
         <?php
@@ -112,22 +126,22 @@ include ('php/registration/dbcon.php');
             echo "Hello" ?><span class="quote-author">
               <?php echo ucfirst($_SESSION['uname']) ?>
             </span>
-            <?php echo " welcome back 😊!";
+          <?php echo " welcome back 😊!";
           }
           ?>
         </p>
         <p style="font-size:large;">
           <?php echo "Avg-rating from our Customer " ?><span class="quote-author">
             <?php
-            $sql="SELECT points FROM review";
-            $result=mysqli_query($conn,$sql);
-            $num=mysqli_num_rows($result);
-            $total=0;
-            while($data=mysqli_fetch_assoc($result)){
-              $total+=intval($data['points']);
+            $sql = "SELECT points FROM review";
+            $result = mysqli_query($conn, $sql);
+            $num = mysqli_num_rows($result);
+            $total = 0;
+            while ($data = mysqli_fetch_assoc($result)) {
+              $total += intval($data['points']);
             }
-            $avg=$total/$num;
-            echo number_format($avg, 2). " / 5 ";
+            $avg = $total / $num;
+            echo number_format($avg, 2) . " / 5 ";
             ?>
           </span>
         </p>
@@ -163,22 +177,14 @@ include ('php/registration/dbcon.php');
       <div class="image-container">
         <p class="dbl-click-msg">*double click to select Occasion</p>
         <div id="image-track">
-          <img class="gallery-image" src="media/images/Header/image1.jpg" draggable="false"
-            ondblclick="galImagedblclick()" />
-          <img class="gallery-image" src="media/images/Header/image2.jpg" draggable="false"
-            ondblclick="galImagedblclick()" />
-          <img class="gallery-image" src="media/images/Header/image3.jpg" draggable="false"
-            ondblclick="galImagedblclick()" />
-          <img class="gallery-image" src="media/images/Header/image4.jpg" draggable="false"
-            ondblclick="galImagedblclick()" />
-          <img class="gallery-image" src="media/images/Header/image5.jpg" draggable="false"
-            ondblclick="galImagedblclick()" />
-          <img class="gallery-image" src="media/images/Header/image6.jpg" draggable="false"
-            ondblclick="galImagedblclick()" />
-          <img class="gallery-image" src="media/images/Header/image7.jpg" draggable="false"
-            ondblclick="galImagedblclick()" />
-          <img class="gallery-image" src="media/images/Header/image8.jpg" draggable="false"
-            ondblclick="galImagedblclick()" />
+          <img class="gallery-image" src="media/images/Header/image1.jpg" draggable="false" ondblclick="galImagedblclick()" />
+          <img class="gallery-image" src="media/images/Header/image2.jpg" draggable="false" ondblclick="galImagedblclick()" />
+          <img class="gallery-image" src="media/images/Header/image3.jpg" draggable="false" ondblclick="galImagedblclick()" />
+          <img class="gallery-image" src="media/images/Header/image4.jpg" draggable="false" ondblclick="galImagedblclick()" />
+          <img class="gallery-image" src="media/images/Header/image5.jpg" draggable="false" ondblclick="galImagedblclick()" />
+          <img class="gallery-image" src="media/images/Header/image6.jpg" draggable="false" ondblclick="galImagedblclick()" />
+          <img class="gallery-image" src="media/images/Header/image7.jpg" draggable="false" ondblclick="galImagedblclick()" />
+          <img class="gallery-image" src="media/images/Header/image8.jpg" draggable="false" ondblclick="galImagedblclick()" />
         </div>
       </div>
       <!-- small curver below Category section  -->
@@ -202,7 +208,7 @@ include ('php/registration/dbcon.php');
             your photos like a chad in the corner. I hope that you like to
             work with best people and so you will contact me
           </p>
-          <a class="anchor-btn" href="#" draggable="false">Contact Me</a>
+          <a class="anchor-btn" href="html/contact.html" draggable="false">Contact Me</a>
         </div>
       </article>
     </section>
@@ -300,6 +306,12 @@ include ('php/registration/dbcon.php');
   <footer>
     <div>
       <img class="logo" src="media/images/Header/Logo.png" alt="picture perfect logo" />
+    </div>
+    <div>
+      <a class="footer-href-design blog" href="./html/All-Blog.html"><i class="fa fa-question"></i> Faq's</a>
+    </div>
+    <div>
+      <a class="footer-href-design contact-us" href="contact.html"><i class="fa fa-phone"></i> Contact us</a>
     </div>
     <div class="footer-content">
       &copy; Copyright 2022-2023 by Refsnes Data. All Rights Reserved. Picture

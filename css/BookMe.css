@@ -402,6 +402,64 @@
     box-shadow: inset 0.1vmin 0.1vmin rgb(102, 99, 99);
   }
 
+/* footer section of page */
+
+footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  height: 20vh;
+  background-color: var(--changing-text-color);
+  position: relative;
+}
+footer a{
+  color: white;
+  text-decoration: none;
+}
+footer > div {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  max-width: clamp(200px, 30%, 30vw);
+  height: auto;
+}
+
+.footer-href-design{
+  font-size: 2rem;
+  background-color: #0000004b;
+  padding: .5rem 2rem;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.footer-href-design:hover{
+  background-color: #0000009d;
+}
+
+.blog{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.contact-us{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+
+footer .footer-content {
+  color: var(--black);
+  font-size: var(--medium);
+  margin: 0 0.5rem;
+}
+
   @media screen and (max-width: 1032px) {
     .book-me-container {
       grid-template-columns: 1fr;
