@@ -221,7 +221,7 @@ include('php/registration/dbcon.php');
         <div data-aos="fade-right">
           <div class="review">
             <div class="review-img"></div>
-            <div class="reviewer-name">Narendra Modi</div>
+            <div class="reviewer-name">Harish Sharma</div>
             <div class="star">
               <span class="fa fa-star rating-checked"></span>
               <span class="fa fa-star rating-checked"></span>
@@ -241,7 +241,7 @@ include('php/registration/dbcon.php');
         <div data-aos="fade-left">
           <div class="review">
             <div class="review-img"></div>
-            <div class="reviewer-name">Narendra Modi</div>
+            <div class="reviewer-name">Harsh Soni</div>
             <div class="star">
               <span class="fa fa-star rating-checked"></span>
               <span class="fa fa-star rating-checked"></span>
@@ -261,7 +261,7 @@ include('php/registration/dbcon.php');
         <div data-aos="fade-right">
           <div class="review">
             <div class="review-img"></div>
-            <div class="reviewer-name">Narendra Modi</div>
+            <div class="reviewer-name">Piyush Kumar</div>
             <div class="star">
               <span class="fa fa-star rating-checked"></span>
               <span class="fa fa-star rating-checked"></span>
@@ -281,7 +281,7 @@ include('php/registration/dbcon.php');
         <div data-aos="fade-left">
           <div class="review">
             <div class="review-img"></div>
-            <div class="reviewer-name">Narendra Modi</div>
+            <div class="reviewer-name">Piyush Tak</div>
             <div class="star">
               <span class="fa fa-star rating-checked"></span>
               <span class="fa fa-star rating-checked"></span>

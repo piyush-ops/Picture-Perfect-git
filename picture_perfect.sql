@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2023 at 09:04 AM
+-- Generation Time: Mar 06, 2023 at 06:57 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -44,7 +44,14 @@ INSERT INTO `gallery` (`id`, `image_url`) VALUES
 (47, 'IMG-63ee76154ff4c3.78564638.jpg'),
 (48, 'IMG-63ee7615507d14.06222166.jpg'),
 (49, 'IMG-63ee761550fb05.95257552.jpg'),
-(50, 'IMG-63ee7615518b66.63924186.jpg');
+(50, 'IMG-63ee7615518b66.63924186.jpg'),
+(51, 'IMG-63f8ee08cc7df5.82979080.jpg'),
+(52, 'IMG-63f8ee58648691.93841647.jpg'),
+(53, 'IMG-63f8ee6c95f2f5.40499694.jpg'),
+(54, 'IMG-63f8ee6c9718e7.53500542.jpg'),
+(55, 'IMG-63f8ee6c97e0a9.74675021.jpg'),
+(56, 'IMG-63f8ee6c988ea2.14312581.jpg'),
+(57, 'IMG-63f8ee6c991996.90519281.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,7 +75,12 @@ CREATE TABLE `payment` (
 --
 
 INSERT INTO `payment` (`emailID`, `amount`, `orderDate`, `paymentMode`, `txnStatus`, `address`, `uname`, `pid`) VALUES
-('pkd342001@gmail.com', 25000, '2023-02-16 03:45:57', 'card_1MbtGtBeXDHZA7Zg1rcnH3St', 'succeeded', 't101 medical colony ratanada Jodhpur Rajasthan,342001', 'piyush', 34);
+('pkd342001@gmail.com', 25000, '2023-02-16 03:45:57', 'card_1MbtGtBeXDHZA7Zg1rcnH3St', 'succeeded', 't101 medical colony ratanada Jodhpur Rajasthan,342001', 'piyush', 34),
+('terabappayush@gmail.com', 5000, '2023-02-24 21:53:06', 'pending', 'pending', '123324 Jodhpur Rajasthan,1232455', 'piyush', 35),
+('Pictureperfectcor@gmail.com', 25000, '2023-02-24 22:40:27', 'card_1Mf4n8BeXDHZA7ZgEQxNchiY', 'succeeded', 'm76 gandhi nagar  Ahemdabad Gujrat,346005', 'admin', 36),
+('terabappayush@gmail.com', 25000, '2023-02-25 01:09:16', 'pending', 'pending', 't101 medical colony  Ludhiana Punjab,342001', 'piyush', 37),
+('gamingdevil434@gmail.com', 5000, '2023-02-26 21:14:06', 'card_1MiiHCBeXDHZA7ZgapvZxhvq', 'succeeded', 't 101 railway medical colony Jodhpur Rajasthan,342001', 'pranav kumar', 38),
+('gamingdevil434@gmail.com', 25000, '2023-03-06 23:21:08', 'card_1MiiHCBeXDHZA7ZgapvZxhvq', 'succeeded', '1234m gandhi nagar Faridabad Haryana,26002', 'pranav kumar', 39);
 
 -- --------------------------------------------------------
 
@@ -91,9 +103,10 @@ CREATE TABLE `registration` (
 --
 
 INSERT INTO `registration` (`id`, `username`, `email`, `password`, `token`, `status`, `role`) VALUES
-(1, 'admin', 'Pictureperfectcor@gmail.com', '$2y$10$jdFdyAOT.QQLlJxFv0uCpeQdbYB4MTdhNCaGTmK4/ENU.a0bCPxAi', 'I-am-boss-here', 'active', 1),
+(1, 'admin', 'Pictureperfectcor@gmail.com', '$2y$10$jdFdyAOT.QQLlJxFv0uCpeQdbYB4MTdhNCaGTmK4/ENU.a0bCPxAi', 'I-am-boss-here', 'active', 2),
 (10, 'piyush', 'terabappayush@gmail.com', '$2y$10$nJSQWQsJd14wKsKbFpt4e.jQl22w3RUJ8VHF4opdLamAXHpV.dWga', 'b4ea3e96d8bb5afd1afe713e7fec9e', 'active', 2),
-(11, 'piyush', 'pkd342001@gmail.com', '$2y$10$ZJ8qfnPSMolf8UnN5a/STeJfwt1ZLKIdW6ExsDMXBNDOSucfH4uvO', '07019b12a259ceb261231267f52d33', 'active', 0);
+(11, 'piyush', 'pkd342001@gmail.com', '$2y$10$ZJ8qfnPSMolf8UnN5a/STeJfwt1ZLKIdW6ExsDMXBNDOSucfH4uvO', '07019b12a259ceb261231267f52d33', 'active', 0),
+(12, 'pranav kumar', 'gamingdevil434@gmail.com', '$2y$10$7Er8zHTMEOdks7HKzsng1OxyIiXAsBAboyHWhXnqNYo/gdZ.94J5.', '8ab1acdbf8653373595a248f239532', 'active', 2);
 
 -- --------------------------------------------------------
 
@@ -119,7 +132,14 @@ INSERT INTO `review` (`rid`, `rname`, `remail`, `rtitle`, `rsummary`, `points`, 
 (55, 'piyush', ' terabappayush@gmail.com', 'good people', 'good people i got for my wedding photography also got our album with best pictures and prices so reasonable even broke can pay. Thanks Picture Perfect team', '5', 2),
 (56, 'piyush', ' terabappayush@gmail.com', 'my second time', 'so this time it was again amazing work guys but was hoping lol some kind of special treatment as I was repeat customer but I guess they already do give everyone so much respect.', '4', 2),
 (58, 'piyush', ' terabappayush@gmail.com', 'such a good purchase', '  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cupiditate architecto pariatur necessitatibus cum minus itaque, illum aspernatur laborum corrupti perspiciatis modi ea id quas quaerat natus accusantium placeat tempora. Architecto, commodi excepturi magnam culpa eveniet sequi nesciunt nam, aliquid dolorum cum harum odio debitis, recusandae quam nostrum sint distinctio odit. Rem accusamus corporis dolor perspiciatis aut. Sint modi, quia earum facilis omnis quo recusandae. Esse totam neque pariatur molestias officia necessitatibus eveniet quae tempora expedita laudantium nam itaque perspiciatis velit non ipsa quidem, earum sequi asperiores placeat eligendi? Hic illo sint saepe repellendus commodi reiciendis sunt itaque non dolores libero temporibus labore obcaecati rem debitis doloribus blanditiis, provident, eveniet maxime quaerat suscipit eligendi odit dignissimos voluptatem minima. Reiciendis id consequatur, voluptates amet sit dolorem provident ', '5', 2),
-(59, 'piyush', ' pkd342001@gmail.com', 'will definitely come again', 'so good to select such a nice people to take such a cute and amazing photos of my child who is just 5 years old. Let me tell you they definitely definitely provide more then I could ever ask for and so polite too. You can guarantee my next visit.', '5', 0);
+(59, 'piyush', ' pkd342001@gmail.com', 'will definitely come again', 'so good to select such a nice people to take such a cute and amazing photos of my child who is just 5 years old. Let me tell you they definitely definitely provide more then I could ever ask for and so polite too. You can guarantee my next visit.', '5', 0),
+(61, 'admin', ' Pictureperfectcor@gmail.com', 'good work ', 'liked it', '4', 2),
+(62, 'admin', ' Pictureperfectcor@gmail.com', 'good site', 'have not used the service but i think someone who did such a nice work with the site will definitely do a good job with photographs too. will like to work with you. lets better use contact and send you a whatsapp message i guess', '4', 2),
+(63, 'admin', ' Pictureperfectcor@gmail.com', 'heii am  review title', 'heii am review', '2', 2),
+(64, 'admin', ' Pictureperfectcor@gmail.com', 'heii am a review title', '1234', '2', 2),
+(65, 'piyush', ' pkd342001@gmail.com', 'my  review is best review', 'very good people nice settings for your product and nice atmosphere overall to call it one of the best photo sessions ever', '5', 0),
+(66, 'pranav kumar', ' gamingdevil434@gmail.com', 'review', 'preety decent  photos but not fast service', '3', 0),
+(67, 'pranav kumar', ' gamingdevil434@gmail.com', 'Very good site def going to book you guys', 'I loved your site, got recommended by my friend who hired you for his family shoot and he told me that you guys do good work. I am marrying soon so I will be taking marriage shoot photography. Prices are very reasonable so I hope that you guys will not mess anything up.', '5', 2);
 
 -- --------------------------------------------------------
 
@@ -185,25 +205,25 @@ ALTER TABLE `tbl_uploads`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `rid` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `rid` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `tbl_uploads`

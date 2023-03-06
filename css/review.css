@@ -432,6 +432,7 @@
   }
 
   .spiecific-rating-container {
+    margin-top: 1rem;
     position: relative;
     height: 25vh;
   }

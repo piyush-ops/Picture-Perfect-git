@@ -50,7 +50,7 @@ if (!isset($_SESSION['amount'])) {
     }
     ?>
     <h2>Checkout Form</h2>
-    <p>Note:-This form should only be filled by user who want their photography shoot in India.</p>
+    <p>Note:-Pls select your State to get list of available cities. If you cant find your city we are not currently available in your location.</p>
     <p>you can only see the email its non changable</p>
     <p>
         <?php if (isset($problem)) {

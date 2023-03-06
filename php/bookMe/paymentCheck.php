@@ -52,7 +52,7 @@ require('../registration/dbcon.php');
 <body>
     <?php
     $email = $_SESSION['email'];
-    $query = "select * from payment where emailID='$email'";
+    $query = "select * from payment where emailID='$email' ORDER BY pid DESC LIMIT 1";
     $sql = mysqli_query($conn, $query);
     $data = mysqli_fetch_assoc($sql);
     $uname = $data['uname'];
