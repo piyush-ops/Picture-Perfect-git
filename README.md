@@ -28,3 +28,7 @@ Users have multiple option to contact us including whatsapp,msg or Email us dire
 Gallery:-
 Users can see the images captured by photographer from this section, Its a dynamic section fetching images from database.
 Photographer can add more images in here through Dasboard.
+
+
+Project Report:-[project report p1 group.pdf](https://github.com/piyush-ops/Picture-Perfect-git/files/11016817/project.report.p1.group.pdf)
+
